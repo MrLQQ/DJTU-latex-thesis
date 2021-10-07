@@ -1,0 +1,141 @@
+%-------------------------------------------------
+% FileName: chapt-5.tex
+% Author: MrLQQ
+% Date: 2021-10-7
+% Description: 第5章
+% Others: 
+% History: origin
+%------------------------------------------------- 
+
+
+% 断页
+% \clearpage
+\chapter{系统测试}
+
+\section{测试任务及目的}
+系统测试就是以发现程序错误或不稳定性而执行程序的过程。系统测试的目的是实现……
+
+第五章系统测试内容占3页左右。
+
+
+\section{测试计划}
+本段介绍系统测试的具体计划，采用什么样的测试方式方法针对哪些模块做测试，如何做测试等进行介绍。……
+
+\section{测试用例}
+完全手动完成的表格，如表\ref{tab:tab1}所示。
+\begin{table}[htbp] % htbp 浮动优先级
+	\centering  % 居中
+	\caption{一个表格}  % 表格标题
+	\label{tab:tab1}  % 用于引用的label
+	% 字母的个数对应列数，|代表分割线
+	% l代表左对齐，c代表居中，r代表右对齐
+	\begin{tabular}{|c|c|c|c|}   
+		\hline  % 表格的横线 
+		1 & 2 & 3 & 4 \\  % 表格中的内容，用&分开，\\表示下一行
+		\hline 
+		0.1 & 0.2 & 0.3 & 0.4 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+以下编辑器(TexStudio)的表格向导生成的表格，如表\ref{tab:tab2}所示。
+\begin{table}[htbp]
+	\centering  
+	\caption{诗词曲}   
+    \label{tab:tab2}  
+    \begin{tabular}{|c|c|c|c|}
+        \hline 
+          & 唐诗 & 宋词 & 元曲 \\ 
+        \hline 
+        1 & 李白 & 苏轼 & 关汉卿 \\ 
+        \hline 
+        2 & 白居易 & 辛弃疾 & 马致远 \\ 
+        \hline 
+        3 & 杜甫 & 李清照 & 张可久 \\ 
+        \hline 
+        4 & 王维 & 陆游 & 张养浩 \\ 
+        \hline 
+        5 & 孟浩然 & 欧阳修 & 徐再思 \\ 
+        \hline 
+    \end{tabular}  
+\end{table}
+
+longtable表格，可用于跨页，如表\ref{tab:longtab}所示。
+\begin{longtable}{|p{150pt}|p{150pt}|p{100pt}|}% @{\extracolsep{\fill}} 设置使得后面所有列间距可以伸展到预定义的表格宽度。
+	\caption{\label{tab:longtab}下载字幕功能测试表}\\
+	\hline	
+	\multicolumn{3}{|c|}{\bf 下载字幕功能测试表} \\ \hline
+	
+	%输入/行　&　预期结果　&　实际结果 \\ \hline  \endfirsthead %1第一页表头
+	测试用例描述& \multicolumn{2}{p{250pt}|}{选择输入信息后点击下载按钮，观察是否正常下载字幕，是否有提示进度，完成后提示} \\ \endfirsthead
+	
+	\multicolumn{3}{r}{续表 ~\ref{tab:longtab}} \\ \hline
+	
+	输入/行&预期结果&实际结果\\ \hline  \hline \endhead %2续页表头
+	\hline 
+	前提条件& \multicolumn{2}{p{250pt}|}{无}   \\ 
+	\hline
+	测试环境 　& \multicolumn{2}{p{250pt}|}{Win10家庭版} \\
+	\hline  
+	输入/行&预期结果&实际结果 \\
+	\hline 
+	不输入关键词点击下载字幕 & 界面提示请输入关键词 & 与预期相同  \\ 
+	\hline 
+	输入关键词，不选择存盘位置，点击下载字幕 & 界面提示请选择存盘位置 & 与预期相同  \\ 
+	\hline 
+	输入已有关键词，选择存盘位置，点击下载字幕 & 界面进度条随完成进度变化，完成后提示存盘位置 & 与预期相同 \\ 
+	\hline 
+	输入不存在关键词，选择存盘位置，点击下载字幕 & 显示无搜索结果 & 与预期相同 \\ 
+	\hline
+	输入关键词，选择存盘位置，点击下载字幕，后取消 & 重新回到原来界面 & 与预期相同 \\ 
+	\hline 
+\end{longtable}
+
+嵌套表格，如表\ref{tab:tab3}所示。
+\begin{table}[H]
+	\centering  
+	\caption{嵌套表格}   
+    \label{tab:tab3} 
+    \begin{tabular}{|c|c|c|}
+        \hline
+        a & b & c \\ \hline
+        a & \multicolumn{1}{@{}c@{}|}
+        {\begin{tabular}{c|c}
+            e & f \\ \hline
+            e & f \\
+        \end{tabular}}
+        & c \\ \hline
+        a & b & c \\ \hline
+    \end{tabular}
+\end{table}
+
+控制列宽和行距的表格，如表\ref{tab:tab4}所示。
+\begin{table}[H]
+    \centering  
+	\caption{控制列宽和行距的表格}   
+    \label{tab:tab4}
+    \renewcommand\arraystretch{1.8}
+    \begin{tabularx}{14em}
+        {|*{4}{>{\centering\arraybackslash}X|}}
+        \hline
+        A & B & C & D \\ \hline
+        a & b & c & d \\ \hline
+    \end{tabularx}
+\end{table}
+
+表格单行内容太长，直接换行，如表\ref{tab:tab5}所示。
+\begin{table}[htbp]
+	\centering  
+	\caption{单行内容太长直接换行}   
+    \label{tab:tab5}  
+    \begin{tabular}{|c|c|c|c|}
+        \hline 
+          & 唐诗 & 宋词 & 元曲 \\ 
+        \hline 
+        1 & 李白李白李白 & 苏轼苏轼苏轼苏轼 & 关汉卿关汉卿关汉卿关汉卿 \\
+         & 李白李白李白李白 & 苏苏轼苏轼轼 & 关汉卿关汉卿关汉卿 \\
+        \hline 
+        2 & 白居易 & 辛弃疾 & 马致远 \\ 
+        \hline 
+    \end{tabular}  
+\end{table}

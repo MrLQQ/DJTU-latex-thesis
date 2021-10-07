@@ -1,0 +1,38 @@
+%-------------------------------------------------
+% FileName: reference.tex
+% Author: MrLQQ
+% Date: 2021-10-7
+% Description: 结论
+% Others: 如无需要，不用修改本文件
+%         参考文献请到 bib/ref.bib中按格式增加
+% History: origin
+%-------------------------------------------------
+
+
+% 本章节是书写结论内容的
+
+
+% 以下不用改动-------------------------------------
+% 断页
+\clearpage
+% hyperef 精确定位
+% 设置一个anchor，主要针对\addcontentsline
+% 防止目录，书签等指向错误位置 
+\phantomsection
+%增加到目录，与chapter同级别
+\addcontentsline{toc}{chapter}{\defconclusion}
+% \chapter*{} 表示不编号，不生成目录
+% \markboth{}{} 用于页眉
+\chapter*{\defconclusion \markboth{\defconclusion}{}}
+
+
+% 修改以下内容---------------------------------
+% 设置行距1.5
+{\linespread{1.5} \selectfont 在当今社会中，有很多的人与自己对口的工作，并而公司也没能招聘到所需要的人才。
+	
+	第二段招聘信息，系统会根据个人最新一次的搜索内容进行推荐职位。企业用户可以在注册后登录，有权发布和管理招聘信息。管理员用户对个人、企业管理员进行管理，并简历和招聘信息审核。。
+	
+	第三段结论。\par} %\par 强制换行，使得行距生效
+
+
+

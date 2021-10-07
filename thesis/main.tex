@@ -1,0 +1,35 @@
+%-------------------------------------------------
+% FileName: main.tex
+% Author: Safin (zhaoqid@zsc.edu.cn)
+% Version: 0.1
+% Date: 2020-05-12
+% Description: 主文档，包含其它tex文档
+%     如果要增加新的章节，请先到 tex目录增加文件，再input
+%     如果附录没有内容，就注释掉
+% Others: 编译方法参考 make.sh
+%         适配TeXLive2020
+%         必须用 [UTF-8无BOM] 编码
+% History: origin
+%-------------------------------------------------
+
+\documentclass{style/zscthesis} % 自定义thesis
+
+\begin{document} 
+	
+    \input{tex/frontinfo.tex}       % 封面
+    %\input{tex/declaration.tex}     % 声明
+    \input{tex/abstract-ch.tex}     % 中文摘要
+    \input{tex/abstract-en.tex}     % 英文摘要
+    \input{tex/content.tex}         % 目录 (如无需要，不用修改)
+    \input{tex/chap-1.tex}          % 第1章
+    \input{tex/chap-2.tex}
+    \input{tex/chap-3.tex}          % 增加新章节到tex目录，此处input
+    \input{tex/chap-4.tex} 
+    \input{tex/chap-5.tex}
+    %\input{tex/chap-6.tex}          % 第6章
+    \input{tex/conclusion.tex}		% 结论
+    \input{tex/acknowledgement.tex}	% 谢辞
+    \input{tex/reference.tex}       % 参考文献 (修改bib/ref.bib)
+    \input{tex/appendix.tex}        % 附录 (无内容请注释掉) 
+    %\cline{2-2}\input{tex/acknowledgement.tex} % 致谢
+\end{document}

@@ -1,0 +1,37 @@
+%-------------------------------------------------
+% FileName: frontinfo.tex
+% Author: MrLQQ
+% Date: 2021-10-7
+% Description: 封面
+% Others: 
+% History: origin
+%------------------------------------------------- 
+
+% 根据个人信息修改{}中的内容------------------------
+% 论文题目
+\mytitle{论文模板设计与实现} 
+% 英文题目
+%\MYTITLE{Design and Implementation of \LaTeX{} Thesis of Zhongshan Institute}
+% 教学指导单位 
+\institute{信息学院} 
+% 专业名称 
+\major{软件工程182}  
+% 学号 多个学号用~分隔，如果要分行用\\分隔
+\studentid{12345678910} 
+% 学生姓名 多个学生用~分隔，如果要分行用\\分隔
+\student{某某某} 
+% 指导教师(职称) 多个导师用~分隔，如果要分行用\\分隔
+\advisor{老师老师(讲师)} 
+% 指导单位 
+% \institute{计算机学院} 
+% 完成时间 
+\completedate{2020年4月19日} 
+
+% 以下不用改动-------------------------------------
+% 加入书签, bm@frontpage要唯一
+\currentpdfbookmark{\deffrontpage}{bm@frontpage}
+% 封面无页眉页脚
+\thispagestyle{empty}
+% 根据以上的参数 生成标题页
+\mymaketitle
+

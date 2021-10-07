@@ -1,0 +1,44 @@
+%-------------------------------------------------
+% FileName: appendix.tex
+% Author: MrLQQ
+% Date: 2021-10-7
+% Description: 附录
+% Others: 如果没有内容，就在main.tex中注释掉
+% History: origin
+%------------------------------------------------- 
+
+
+% 以下不用改动-------------------------------------
+% 断页
+ \clearpage
+
+
+
+% hyperef 精确定位
+% 设置一个anchor，主要针对\addcontentsline
+% 防止目录，书签等指向错误位置 
+ \phantomsection
+% 增加到目录，与chapter同级别
+ \addcontentsline{toc}{chapter}{\defappendix} 
+% \chapter*{} 表示不编号，不生成目录
+% \markboth 用于页眉
+ \chapter*{\defappendix \markboth{\defappendix}{}} 
+
+% appendix 用于附录章节的特殊编号 从A开始
+%\appendix
+
+
+% 修改以下内容---------------------------------
+\begin{description}\itemsep0.75pt
+	\item [附录一:] 
+	《大连交通大学毕业设计(论文)软件使用说明书》
+	
+	\item[附录二:] 
+	《大连交通大学毕业设计(论文)软件程序源代附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录附录
+	
+	\item[附录三:] 
+	附录3
+\end{description}
+
+
+
